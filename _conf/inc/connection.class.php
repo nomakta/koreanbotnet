@@ -1,6 +1,6 @@
 <?php 
 
-   include($_SERVER['DOCUMENT_ROOT'].'/_conf/conf.inc.php')
+   include($_SERVER['DOCUMENT_ROOT'].'/_conf/conf.inc.php');
 
     try {
     $dbh = new PDO('mysql:host=' + DBhost + ';dbname=' + DBname, DBuser, DBPass);
