@@ -1,0 +1,9 @@
+c:\users\charlie\documents\visual studio 2015\Projects\dongs\dongs\bin\Debug\dongs.exe.config
+c:\users\charlie\documents\visual studio 2015\Projects\dongs\dongs\bin\Debug\dongs.exe
+c:\users\charlie\documents\visual studio 2015\Projects\dongs\dongs\bin\Debug\dongs.pdb
+c:\users\charlie\documents\visual studio 2015\Projects\dongs\dongs\obj\Debug\dongs.csprojResolveAssemblyReference.cache
+c:\users\charlie\documents\visual studio 2015\Projects\dongs\dongs\obj\Debug\dongs.Form1.resources
+c:\users\charlie\documents\visual studio 2015\Projects\dongs\dongs\obj\Debug\dongs.Properties.Resources.resources
+c:\users\charlie\documents\visual studio 2015\Projects\dongs\dongs\obj\Debug\dongs.csproj.GenerateResource.Cache
+c:\users\charlie\documents\visual studio 2015\Projects\dongs\dongs\obj\Debug\dongs.exe
+c:\users\charlie\documents\visual studio 2015\Projects\dongs\dongs\obj\Debug\dongs.pdb
