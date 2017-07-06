@@ -8,12 +8,32 @@ Class User
     {
       $this->db = $DB_con;
     }
+
+  public function is_loggedin()
+   {
+      if(isset($_SESSION['user_session']))
+      {
+         return true;
+      }
+   }
+ 
+   public function redirect($url)
+   {
+       header("Location: $url");
+   }
+ 
+   public function logout()
+   {
+        session_destroy();
+        unset($_SESSION['user_session']);
+        return true; 
+    }
   
+    
   public function CreateUser($username, $password, $permissions)
    {
   
    }
-  
   
   // i finish later bye
   public function Login($username, $password) 
@@ -36,24 +56,6 @@ Class User
              }
    }
    
-  public function is_loggedin()
-   {
-      if(isset($_SESSION['user_session']))
-      {
-         return true;
-      }
-   }
- 
-   public function redirect($url)
-   {
-       header("Location: $url");
-   }
- 
-   public function logout()
-   {
-        session_destroy();
-        unset($_SESSION['user_session']);
-        return true; 
-    }
+  
 }
 ?>
