@@ -9,4 +9,9 @@
           print "Error!: " . $e->getMessage() . "<br/>";
           die();
         }
+
+      
+      include_once 'user.class.php';
+      $user = new USER($dbh);
+
 ?>
