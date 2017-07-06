@@ -4,10 +4,11 @@
 /*********************
 Panel config
 **********************/
-define("PanelBase", "http://localhost");
+define("PanelBase", "http://localhost/");
 define("PanelTheme", "Default");
 define("PanelName", "KoreanBotnet");
 
+define("PanelURL", PanelBase + PanelTheme);
 
 define("PanelSecretURL", "hehtest");
 define("PanelSecretPass", "test213");
