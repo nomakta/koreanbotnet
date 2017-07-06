@@ -3,13 +3,12 @@
 $path = $_SERVER['DOCUMENT_ROOT'];
 $path .= "/panel 2/_conf/inc/connection.class.php";
 
-require $path;
+@require $path;
 
 
 if($user->is_loggedin())
 {
-	echo "Already logged in?";
-  $user->redirect($path . 'Dashboard.php');
+  $user->redirect($path . 'Dashboard');
 }
 
 if(isset($_POST['smbt1']))
@@ -23,13 +22,12 @@ if(isset($_POST['smbt1']))
  $passprot2 = md5($passprot1);
  if($user->login($usr,$passprot2))
  {
-  echo "Logged in!";
+   header('Location: dashboard');
 
  }
  else
  {
- 	// We do nothing
- 
+  $error = "Incorrect username or password";
  } 
 }
 ?>
@@ -42,7 +40,16 @@ if(isset($_POST['smbt1']))
 <!-- Nav Text Fix -->
 
 <h2>Login</h2>
-
+            <?php
+            if(isset($error))
+            {
+                  ?>
+                  <div class="alert alert-danger">
+                      <i class="glyphicon glyphicon-warning-sign"></i> &nbsp; <?php echo $error; ?> 
+                  </div>
+                  <?php
+            }
+            ?>
 <form method="POST" action="" name="frm1" enctype="application/x-www-form-urlencoded">
 <div class="input-group">
 <input type="text" class="form-control" placeholder="Username" name="username">
@@ -53,3 +60,4 @@ if(isset($_POST['smbt1']))
 
 <input type="submit" name="smbt1" class="btn btn-success" value="Login">
 </form>
+</div>

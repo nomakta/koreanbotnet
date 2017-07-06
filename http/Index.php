@@ -9,21 +9,15 @@ $GetURL = filter_input(INPUT_GET, 'url', FILTER_DEFAULT);
 $SetURL = (empty($GetURL) ? 'index' : $GetURL);
 $URL = explode('/', $SetURL);
 
-echo  PanelReq . $URL[0];
+
 // We will check if the theme is set up correctly
-        if ($URL[0] == 'login'):
-            if (file_exists(PanelReq . '/login.php')):
-                require_once PanelReq . '/login.php';
-            else:
-                require_once PanelReq . '/404.php';
-            endif;
-        else:
+        
             if (file_exists(PanelReq . '/inc/header.php')):
                   require_once PanelReq . '/inc/header.php';
             else:
                 trigger_error('Can\'t find page  "/inc/header.inc.php"');
             endif;
-            if (file_exists(PanelPath . "/{$URL[0]}.php")):
+            if (file_exists(PanelReq . "/{$URL[0]}.php")):
                 require_once PanelReq . "/{$URL[0]}.php";
             else:
                 if (file_exists(PanelReq . '/404.php')):
@@ -31,7 +25,7 @@ echo  PanelReq . $URL[0];
                 else:
                     trigger_error('Can\'t find page "404.php"');
                 endif;
-            endif;
+            
         endif;
         if (file_exists(PanelReq . '/inc/footer.php')):
             require_once PanelReq . '/inc/footer.php';

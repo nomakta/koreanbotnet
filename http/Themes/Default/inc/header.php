@@ -23,12 +23,12 @@ if  (isset($_SESSION['user_session']))
 <nav class="navbar navbar-static-top" role="navigation">
 	<div class="container">
 	<div class="navbar-header">
-	<a href="#" class="navbar-brand"></a>
+	<a href="" class="navbar-brand"><?php echo PanelName; ?></a>
 	</div>
 
 	 <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-      <li><a href="index.php">Home</a></li>
+      <li><a href="dashboard">Home</a></li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Functions <b class="caret"></b></a>
         <ul class="dropdown-menu">
@@ -37,7 +37,7 @@ if  (isset($_SESSION['user_session']))
 		  <li><a href="tasks.php?status=0">View Tasks</a></li>
         </ul>
       </li>
-      <li><a href="logout.php">Logout</a></li>
+      <li><a href="logout">Logout</a></li>
 	  </ul>
 	  <p class="navbar-text pull-right">Logged in as <b><?php echo $_SESSION['user_session']; ?></b></p>
 	  </div>
