@@ -1,6 +1,14 @@
 <?php 
 Class User
 {
+  
+  private $db;
+ 
+    function __construct($DB_con)
+    {
+      $this->db = $DB_con;
+    }
+  
   public function CreateUser($username, $password, $permissions)
    {
   
