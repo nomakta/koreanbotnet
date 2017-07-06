@@ -1,9 +1,10 @@
 <?php 
 
-   include($_SERVER['DOCUMENT_ROOT'].'/_conf/conf.inc.php');
-
+   include('../conf.inc.php');
+   $host = DBhost;
+   $Database = DBname;
     try {
-    $dbh = new PDO('mysql:host=' + DBhost + ';dbname=' + DBname, DBuser, DBPass);
+    $dbh = new PDO('mysql:host=$host;dbname=$Database' DBuser, DBPass);
         }catch (PDOException $e) {
           print "Error!: " . $e->getMessage() . "<br/>";
           die();
