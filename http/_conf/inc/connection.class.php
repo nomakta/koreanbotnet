@@ -17,6 +17,10 @@ try {
           die();
         }
 
-      include_once 'user.class.php';
-      $user = new USER($dbh);
+    include_once 'user.class.php';
+    include_once 'functions.class.php';   
+
+    $user = new USER($dbh);
+    $functions = new functions($dbh);
+       
 ?>
