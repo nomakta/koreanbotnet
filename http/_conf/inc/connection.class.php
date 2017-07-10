@@ -17,23 +17,12 @@ try {
           die();
         }
 
-<<<<<<< HEAD
-  	include_once 'bots.class.php';
-	include_once 'user.class.php';
+    include_once 'bots.class.php';
+    include_once 'user.class.php';
     include_once 'functions.class.php';   
   
 
     $bots = new Bots($dbh);
     $user = new USER($dbh);
     $functions = new FUNCTIONS($dbh);
-
-
-=======
-    include_once 'user.class.php';
-    include_once 'functions.class.php';   
-
-    $user = new USER($dbh);
-    $functions = new functions($dbh);
-       
->>>>>>> origin/master
 ?>
