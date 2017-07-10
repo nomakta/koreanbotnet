@@ -1,5 +1,9 @@
 <?php 
+<<<<<<< HEAD
 Class Functions
+=======
+Class functions
+>>>>>>> origin/master
 {
     private $db;
  
@@ -7,9 +11,15 @@ Class Functions
     {
       $this->db = $DB_con;
     }
+<<<<<<< HEAD
     
    public function getinfo($type)
    { 
+=======
+
+    function GetInformation()
+    {
+>>>>>>> origin/master
     
     // Give the amount of bots connected
     $bots1 = $this->db->prepare("SELECT * FROM reports");
@@ -22,6 +32,7 @@ Class Functions
     $tasks1->execute();
     $taskcount = $tasks1->rowCount();
     
+<<<<<<< HEAD
     $message = $botscount;
    
    echo $message;
@@ -31,3 +42,15 @@ Class Functions
 
 
 ?>
+=======
+    $message = "<li><b>Amount of bots: </b" . $botscount "</li> <li><b>Amount of tasks: </li></b>" . $taskcount;
+   
+   
+    return $message;
+    }
+
+
+}
+
+?>
+>>>>>>> origin/master
