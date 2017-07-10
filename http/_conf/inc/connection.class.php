@@ -17,6 +17,14 @@ try {
           die();
         }
 
-      include_once 'user.class.php';
-      $user = new USER($dbh);
+  	include_once 'bots.class.php';
+	include_once 'user.class.php';
+    include_once 'functions.class.php';   
+  
+
+    $bots = new Bots($dbh);
+    $user = new USER($dbh);
+    $functions = new FUNCTIONS($dbh);
+
+
 ?>
