@@ -2,12 +2,13 @@
 
 		<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Linkcabin">
 	<link href="<?php echo PanelPATH ?>/dist/css/bootstrap.css" rel="stylesheet">
 	<link href="<?php echo PanelPATH ?>/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="<?php echo PanelPATH ?>/dist/css/bootstrap-glyphicons.css" rel="stylesheet">
 	<script src="<?php echo PanelPATH ?>/dist/js/bootstrap.min.js"></script>
 	<script src="<?php echo PanelPATH ?>/assets/js/jquery.js"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="<?php echo PanelPATH ?>/js/dropdown.js"></script>
 </head>
 
@@ -32,9 +33,8 @@ if  (isset($_SESSION['user_session']))
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Functions <b class="caret"></b></a>
         <ul class="dropdown-menu">
-          <li><a href="viewreport.php?status=0">View Reports</a></li>
-		  <li><a href="tasks.php?status=1&uide=">Create Task</a></li>
-		  <li><a href="tasks.php?status=0">View Tasks</a></li>
+          <li><a href="viewbots">View Bots</a></li>
+		  <li><a href="tasks">View Tasks</a></li>
         </ul>
       </li>
       <li><a href="logout">Logout</a></li>

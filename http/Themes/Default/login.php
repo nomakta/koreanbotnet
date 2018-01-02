@@ -22,6 +22,7 @@ if(isset($_POST['smbt1']))
  $passprot2 = md5($passprot1);
  if($user->login($usr,$passprot2))
  {
+  header("Refresh:0");
    header('Location: dashboard');
 
  }

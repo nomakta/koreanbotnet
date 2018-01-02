@@ -4,7 +4,7 @@
 /*********************
 Panel config
 **********************/
-define("BASE", "http://localhost/panel 2");
+define("BASE", "http://192.168.2.6/panel 2");
 
 define("PanelTheme", "Default");
 define("PanelName", "KoreanBotnet");
@@ -30,6 +30,7 @@ define("DBhost", "127.0.0.1");
 define("DBuser", "root");
 define("DBpass", "");
 define("DBname", "test")
+
 
 
 ?>

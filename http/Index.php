@@ -11,7 +11,6 @@ $URL = explode('/', $SetURL);
 
 
 // We will check if the theme is set up correctly
-        
             if (file_exists(PanelReq . '/inc/header.php')):
                   require_once PanelReq . '/inc/header.php';
             else:
@@ -32,6 +31,7 @@ $URL = explode('/', $SetURL);
         else:
             trigger_error('Can\'t find page  "/inc/footer.inc.php"');
         endif;
+
         ?>
 
 <?php
